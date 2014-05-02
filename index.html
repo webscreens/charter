@@ -121,7 +121,35 @@
           Goals
         </h2>
         <p>
-          <span class="toadd">@TBD</span>
+          The group’s goal is to define an API that allows web applications to
+          use secondary screens to display Web content. Phones, tablets,
+          laptops and other devices support ways to attach additional display
+          screens. Common methods include attaching through video ports or
+          HDMI, or wirelessly through Miracast, WiDi, or AirPlay. Screens can
+          also be attached over a network. For many of these techniques the
+          operating system hides how the screen is attached and provides ways
+          for applications to use the screens. Native apps on an operating
+          system can easily use these additional screens without having to know
+          how they are attached to the device. The goal of this CG is to define
+          simple APIs to request displaying an HTML page on the second screen
+          and some means for the launching page on the first screen to
+          communicate with and control the second page, wherever it is
+          rendered. That API should hide the details of the underlying
+          connection technologies and use familiar, common web technologies for
+          messaging.
+        </p>
+        <p>
+          Two common modes of second screen us are: 1. the second screen
+          mirrors the first screen (e.g. display on the laptop is copied on a
+          TV); and 1. extending the first screen and acting as if the second
+          screen is off one edge of the primary screen. In this second case,
+          the content is not the same and apps can run entirely on the second
+          screen (e.g. a remote control on the first screen and a video being
+          played on the second). This group focuses on non-mirrored uses. Other
+          groups could provide lower level APIs that expose features of
+          different connection technologies; this CG won't do that. The user
+          MUST always be in control of permitting use of a second screen and
+          selecting which to use.
         </p>
       </div>
       <div class="scope">
