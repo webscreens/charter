@@ -155,25 +155,82 @@
           Scope
         </h2>
         <p>
-          Two common modes of second screen usage in general are:
+          The scope of this Working Group is to define APIs to allow web
+          applications to access the underlying OS capabilities to display web
+          content on secondary screens.
         </p>
-        <ol style="list-style-type: lower-alpha">
-          <li>the second screen mirrors the first screen (e.g. display on the
-          laptop is copied on a TV); and
+        <p>
+          The specifications produced by this Working Group will include
+          security and privacy considerations. Specifically, the user must
+          always be in control of privacy-sensitive information that may be
+          conveyed through the APIs, such as the visibility or access to second
+          screens.
+        </p>
+        <p>
+          Members of the Working Group should review other working groups'
+          deliverables that are identified as being relevant to the Working
+          Group's mission.
+        </p>
+        <p>
+          The Working Group's deliverables are split in two phases, and to
+          reflect that, the scope section is divided similarly for clarity.
+        </p>
+        <h3>
+          Phase 1
+        </h3>
+        <p>
+          An API to allow a web application to request display of an HTML page
+          on a second screen, with a means to communicate with and control the
+          second page from the initiating page. The API will hide the details
+          of the underlying connection technologies and use familiar, common
+          web technologies for messaging between the initiating page and the
+          page being displayed on the second device.
+        </p>
+        <p>
+          The API is agnostic with regard to the display connection used, and
+          also works with display connections that support video only, for
+          example, a TV connected to a laptop with an HDMI connection. In such
+          a usage scenario, the second page displayed on the second screen must
+          be rendered and converted to video before it is sent to the second
+          screen. The User Agent may use whatever means the operating system
+          provides to prepare and send the video to the second screen. Any
+          interaction between the initiating web page and the page displayed on
+          the second screen would happen within the bounds of the initiating
+          device since both the pages are rendered on that same device, and
+          only a video representation is sent to the second screen.
+        </p>
+        <p>
+          Alternately, if the second screen device understands some other means
+          of transmitting a page to display and a means of two-way message
+          passing, the second page can be rendered on the remote device. How
+          and by which device the second page is rendered is an implementation
+          detail. The User Agent provides access to the known secondary
+          displays it has access to, and the API does not limit the options to
+          be used as secondary displays.
+        </p>
+        <h3>
+          Phase 2
+        </h3>
+        <p class="toadd">
+          @TBD - the group should decide which of the <a href=
+          "http://lists.w3.org/Archives/Public/public-webscreens/2014Mar/0025.html">
+          following aspects discussed in the Community Group</a>, if any, are
+          in scope for this Working Group:
+        </p>
+        <ol class="toadd">
+          <li>Discovery
           </li>
-          <li>the second screen extends the first screen and acts as if the
-          second screen is off one edge of the primary screen.
+          <li>Connection establishment and transport, including message
+          addressing, security and authentication
+          </li>
+          <li>Application / media control protocol
+          </li>
+          <li>Media streaming
           </li>
         </ol>
         <p>
-          In case (b), the content is not the same and web content can run
-          entirely on the second screen (e.g. a remote control on the first
-          screen and a video being played on the second). This Working Group
-          focuses on the case (b).
-        </p>
-        <p>
-          The user must always be in control of permitting use of a second
-          screen and selecting which to use.
+          The Phase 1 deliverable does not have a dependency on the Phase 2
+          deliverables.
         </p>
         <h3>
           Success Criteria
