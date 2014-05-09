@@ -134,7 +134,7 @@
           electronic billboards. These devices have a variety of device display
           screens. There are also a variety of mechanisms that allow these
           devices to use display screens available in the local environment.
-          Common methods include attaching through video ports or HDMI, or
+          Common methods include attaching through video ports like VGA, DisplayPort or HDMI, or
           wirelessly through Miracast, WiDi, or AirPlay. Screens can also be
           attached over a network. A device like a laptop could provide a
           screen for a smaller device like a phone. For many of these
@@ -142,7 +142,7 @@
           provides ways for native applications to use the screens. Native
           applications on an operating system can easily use these additional
           screens without having to know how they are attached to the device.
-          There is no way now, however, for a web page to take advantage of
+          At this point, however, there is no way for a web page to take advantage of
           these available secondary displays.
         </p>
         <p>
@@ -201,7 +201,7 @@
         </p>
         <p>
           Alternately, if the second screen device understands some other means
-          of transmitting a page to display and a means of two-way message
+          of transmitting a page to a display and a means of two-way message
           passing, the second page can be rendered by the remote device. How
           and by which device the second page is rendered is an implementation
           detail. The User Agent provides access to any secondary displays it
@@ -258,6 +258,7 @@
           second screen
           </li>
         </ul>
+        <i>(drott): This part is useful for terminology, but I am not sure we wanna exclude any mode-specific usage. The web app can decide to implement mirroring, or use separate content on the second screen. But that would be left to the web app. Maybe we can describe it like that? The content on the second screen is separate, but applications can opt to implement mirroring like functionatliy?</i>
         <p>
           Two common modes of second screen usage in general are:
         </p>
@@ -298,6 +299,7 @@
             Presentation API
           </dt>
           <dd>
+            <i>(drott): I think we also need to clarify that the API should provide availability information, about whether a) the feature itself is available, b) whether it makes sense to request display on an external screen, mostly, if at least one screen is available.</i>
             An API to enable displaying an HTML page on a second screen and
             communicating between the initiating page and the page that is to
             be displayed on the second screen. The initial version of this
