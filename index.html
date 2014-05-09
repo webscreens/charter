@@ -134,7 +134,7 @@
           electronic billboards. These devices have a variety of device display
           screens. There are also a variety of mechanisms that allow these
           devices to use display screens available in the local environment.
-          Common methods include attaching through video ports or HDMI, or
+          Common methods include attaching through video ports like VGA, DisplayPort or HDMI, or
           wirelessly through Miracast, WiDi, or AirPlay. Screens can also be
           attached over a network. A device like a laptop could provide a
           screen for a smaller device like a phone. For many of these
@@ -142,7 +142,7 @@
           provides ways for native applications to use the screens. Native
           applications on an operating system can easily use these additional
           screens without having to know how they are attached to the device.
-          There is no way now, however, for a web page to take advantage of
+          At this point, however, there is no way for a web page to take advantage of
           these available secondary displays.
         </p>
         <p>
@@ -186,6 +186,9 @@
           web technologies for messaging between the initiating page and the
           page being displayed on the second device.
         </p>
+        <p>The API will provide a means to identify whether requesting display
+            on a second screen is likely successful, i.e. whether at least
+            one secondary screen is available for display.
         <p>
           The API is agnostic with regard to the display connection used, and
           also works with display connections that support video only, for
@@ -200,8 +203,8 @@
           only a video representation is sent to the second screen.
         </p>
         <p>
-          Alternately, if the second screen device understands some other means
-          of transmitting a page to display and a means of two-way message
+          Alternatively, if the second screen device understands some other means
+          of transmitting a page to a display and a means of two-way message
           passing, the second page can be rendered by the remote device. How
           and by which device the second page is rendered is an implementation
           detail. The User Agent provides access to any secondary displays it
@@ -217,7 +220,7 @@
           in scope for this Working Group:
         </p>
         <ol class="toadd">
-          <li>Discovery
+          <li>Connection technology protocol level discovery
           </li>
           <li>Connection establishment and transport, including message
           addressing, security and authentication
