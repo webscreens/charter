@@ -186,6 +186,9 @@
           web technologies for messaging between the initiating page and the
           page being displayed on the second device.
         </p>
+        <p>The API will provide a means to identify whether requesting display
+            on a second screen is likely successful, i.e. whether at least
+            one secondary screen is available for display.
         <p>
           The API is agnostic with regard to the display connection used, and
           also works with display connections that support video only, for
@@ -200,7 +203,7 @@
           only a video representation is sent to the second screen.
         </p>
         <p>
-          Alternately, if the second screen device understands some other means
+          Alternatively, if the second screen device understands some other means
           of transmitting a page to a display and a means of two-way message
           passing, the second page can be rendered by the remote device. How
           and by which device the second page is rendered is an implementation
@@ -217,7 +220,7 @@
           in scope for this Working Group:
         </p>
         <ol class="toadd">
-          <li>Discovery
+          <li>Connection technology protocol level discovery
           </li>
           <li>Connection establishment and transport, including message
           addressing, security and authentication
@@ -258,7 +261,6 @@
           second screen
           </li>
         </ul>
-        <i>(drott): This part is useful for terminology, but I am not sure we wanna exclude any mode-specific usage. The web app can decide to implement mirroring, or use separate content on the second screen. But that would be left to the web app. Maybe we can describe it like that? The content on the second screen is separate, but applications can opt to implement mirroring like functionatliy?</i>
         <p>
           Two common modes of second screen usage in general are:
         </p>
@@ -299,7 +301,6 @@
             Presentation API
           </dt>
           <dd>
-            <i>(drott): I think we also need to clarify that the API should provide availability information, about whether a) the feature itself is available, b) whether it makes sense to request display on an external screen, mostly, if at least one screen is available.</i>
             An API to enable displaying an HTML page on a second screen and
             communicating between the initiating page and the page that is to
             be displayed on the second screen. The initial version of this
