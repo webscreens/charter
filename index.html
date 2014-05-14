@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>
       Second Screen Presentation Working Group
     </title>
     <link rel="stylesheet" href="http://www.w3.org/2005/10/w3cdoc.css" type=
-    "text/css" media="screen">
+    "text/css" media="screen"/>
     <link rel="stylesheet" type="text/css" href=
-    "http://www.w3.org/Guide/pubrules-style.css">
+    "http://www.w3.org/Guide/pubrules-style.css"/>
     <link rel="stylesheet" type="text/css" href=
-    "http://www.w3.org/2006/02/charter-style.css">
+    "http://www.w3.org/2006/02/charter-style.css"/>
   </head>
   <body>
     <div id="template">
@@ -48,9 +48,9 @@
       </ul>
       <p>
         <a href="http://www.w3.org/"><img alt="W3C" height="48" src=
-        "http://www.w3.org/Icons/w3c_home" width="72"></a> <a class=
+        "http://www.w3.org/Icons/w3c_home" width="72"/></a> <a class=
         "domainlogo" href="/UbiWeb/"><img src="http://www.w3.org/Icons/ubi212"
-        alt="Ubiquitous Web Domain"></a>
+        alt="Ubiquitous Web Domain"/></a>
       </p>
       <h1 id="title">
         <span class="toadd">DRAFT</span> Second Screen Presentation Working
@@ -102,7 +102,7 @@
         </tr>
         <tr>
           <th rowspan="1" colspan="1">
-            Initial Team Contacts<br>
+            Initial Team Contacts<br/>
             (FTE %: 100)
           </th>
           <td rowspan="1" colspan="1">
@@ -114,10 +114,10 @@
             Usual Meeting Schedule
           </th>
           <td rowspan="1" colspan="1">
-            Teleconferences: topic-specific calls may be held<br>
+            Teleconferences: topic-specific calls may be held<br/>
             Face-to-face: we will meet during the W3C's annual Technical
             Plenary week; an additional face-to-face meeting may be scheduled
-            by consent of the participants<br>
+            by consent of the participants<br/>
             IRC: active participants, particularly editors, regularly use the
             <a href="irc://irc.w3.org:6665/#webscreens">#webscreens</a> W3C IRC
             channel
@@ -131,23 +131,26 @@
         <p>
           Web content is available on an ever expanding array of devices
           including ebook readers, phones, tablets, laptops, auto displays, and
-          electronic billboards. These devices have a variety of display
+          electronic billboards.  These devices have a variety of display
           screens. There are also a variety of mechanisms that allow these
-          devices to use secondary display screens, attached by wired
-          connections or remotely with wireless, peer-to-peer media.  Common
-          methods include attachment through video ports or HDMI, or wirelessly
-          through Miracast, WiDi, or AirPlay. Wireless screens may also be
-          available on a local area network or over a WAN, brokered by a cloud
-          service.  A device like a laptop could provide a screen for a smaller
-          device like a phone.
+          devices to use secondary display screens available in the local
+          environment, attached by wired connections or remotely with wireless,
+          peer-to-peer media.
+        </p>
+        <p>
+          Common attachment methods include video ports like VGA, DisplayPort or
+          HDMI, or wirelessly through Miracast, WiDi, or AirPlay. Wireless
+          screens may be available on a local area network or over the Internet,
+          brokered by a cloud service.  A device like a laptop could provide a
+          screen for a smaller device like a phone.
         </p>
         <p>
           For many of these techniques the operating system hides how the screen
           is attached and provides ways for native applications to use the
           screens. Native applications on an operating system can easily use
           these additional screens without having to know how they are attached
-          to the device.  There is no way now, however, for a web application to
-          take advantage of these available secondary displays.
+          to the device. At this point, however, there is no way for a web page
+          to take advantage of these available secondary displays.
         </p>
       </div>
       <div class="scope">
@@ -172,18 +175,26 @@
           Group's mission.
         </p>
         <h3>
-          Deliverables
+          API and associated specification
         </h3>
         <p>
           An API to allow a web application to request display of web content on
           a connected display, with a means to communicate with and control the
-          web content from the initiating page and other authorized pages.  The
-          API will hide the details of the underlying connection technologies
-          and use familiar, common web technologies for messaging between the
-          authorized pages and the web content shown on the secondary
-          display.  The web content may comprise HTML documents, web media types
-          such as images, audio, video, or application-specific media, depending
-          on the capabilities of the secondary display for rendering the media.
+          web content from the initiating page and other authorized pages.
+          Pages may become authorized to control the web content by virtue of
+          sharing an origin with the originating page, explicit user permission,
+          or other facilities provided by the user agent.  The API will hide the
+          details of the underlying connection technologies and use familiar,
+          common web technologies for messaging between the authorized pages and
+          the web content shown on the secondary display.  The web content may
+          comprise HTML documents, web media types such as images, audio, video,
+          or application-specific media, depending on the capabilities of the
+          secondary display for rendering the media.
+        </p>
+        <p>
+          The API will provide a means to identify whether requesting display
+          on a second screen is likely successful, i.e. whether at least one
+          secondary screen is available for display.
         </p>
         <p>
           The API is agnostic with regard to the display connection used, and
@@ -199,13 +210,14 @@
           device, and only a video representation is sent to the second screen.
         </p>
         <p>
-          Alternately, the secondary display may be a device that is capable of
-          natively rendering the content to display.  In this scenario, the
-          content to be displayed (or a URL to the content) is sent to the
-          secondary display to be rendered there.  Because the content is
-          rendered separately from the initiating user agent, pages hosted by
-          other user agents may be authorized to control the remotely rendered
-          content.
+          Alternatively, if the second screen device understands some other
+          means of transmitting content to a display and a means of two-way
+          message passing, the web content can be rendered by the remote device.
+          In this scenario, the content to be displayed (or a URL to the
+          content) is sent to the secondary display to be rendered there.
+          Because the content is rendered separately from the initiating user
+          agent, pages hosted by other user agents may be authorized to control
+          the remotely rendered content.
         </p>
         <p>
           For a requested piece of web content, how and by which device the
@@ -213,6 +225,34 @@
           responsible for determining which secondary displays are compatible with
           the content that is requested to be shown through the API.
         </p>
+        <h3>
+          Protocol for utilizing secondary displays
+        </h3>
+        <p>
+          A standardized set of network protocols for sharing content between
+          user agents and wireless secondary displays will facilitate
+          interoperability among browser vendors and display devices and
+          encourage adoption of the API.
+        </p>
+        <p class="toadd">
+          @TBD - the group should decide which of the <a href=
+          "http://lists.w3.org/Archives/Public/public-webscreens/2014Mar/0025.html">
+          following aspects discussed in the Community Group</a>, if any, are in
+          scope for this Working Group.  If they are not deemed in scope, they
+          may be suitable for a parallel effort in an appropriate standards
+          process (e.g., through the IETF).
+        </p>
+        <ol class="toadd">
+          <li>Discovery of wireless secondary displays by the primary user agent
+          </li>
+          <li>Establishment of a messaging channel between the two parties,
+          including message addressing, security and authentication
+          </li>
+          <li>Negotiation of a media streaming session between devices
+          </li>
+          <li>Network transport of media data
+          </li>
+        </ol>
         <h3>
           Success Criteria
         </h3>
@@ -261,31 +301,6 @@
           This Working Group will not define or mandate any video or audio
           codecs.
         </p>
-        <p> 
-          The establishment of a standardized set of network protocols for
-          sharing content between user agents and wireless secondary displays
-          will facilitate interoperability between browser vendors and display
-          devices and encourage adoption of the API.  The protocol suite would
-          cover the following aspects of interaction between the user agent and
-          the secondary display:
-        </p>
-
-        <ol class="toadd">
-          <li>Discovery of wireless secondary displays by the primary user agent
-          </li>
-          <li>Establishment of a messaging channel between the two parties,
-          including message addressing, security and authentication
-          </li>
-          <li>Negotiation of a media streaming session between devices
-          </li>
-          <li>Network transport of media data
-          </li>
-        </ol>
-        <p>
-          Specification of these behaviors is not in scope for this Working
-          Group, but may be suitable for a parallel effort in an appropriate
-          standards process (e.g., through the IETF).
-        </p>
       </div>
       <div>
         <h2 id="deliverables">
@@ -330,33 +345,43 @@
         <h3 id="other-deliverables">
           Other Deliverables
         </h3>
+        <dl>
+          <dt>
+            Test suite
+          </dt>
+          <dd>
+            A comprehensive test suite for all features of a specification is
+            necessary to ensure the specification's robustness, consistency,
+            and implementability, and to promote interoperability between User
+            Agents. Therefore, each specification must have a companion test
+            suite, which should be completed by the end of the Last Call phase,
+            and must be completed, with an implementation report, before
+            transition from Candidate Recommendation to Proposed
+            Recommendation. Additional tests may be added to the test suite at
+            any stage of the Recommendation track, and the maintenance of a
+            implementation report is encouraged.
+          </dd>
+          <dt>
+            Use cases and requirements
+          </dt>
+          <dd>
+            The Working Group is strongly encouraging the participants to
+            create and maintain a use cases and requirements document for each
+            specification.
+          </dd>
+        </dl>
         <p>
-          Other non-normative documents may be created such as:
+          Other non-normative documents may be created for each specification,
+          for example:
         </p>
         <ul>
-          <li>Test suites for each specification
-          </li>
-          <li>Primers for each specification
-          </li>
-          <li>Requirements document for new specifications
+          <li>Primers
           </li>
           <li>Non-normative schemas for language formats
           </li>
           <li>Non-normative group notes
           </li>
         </ul>
-        <p>
-          A comprehensive test suite for all features of a specification is
-          necessary to ensure the specification's robustness, consistency, and
-          implementability, and to promote interoperability between User
-          Agents. Therefore, each specification must have a companion test
-          suite, which should be completed by the end of the Last Call phase,
-          and must be completed, with an implementation report, before
-          transition from Candidate Recommendation to Proposed Recommendation.
-          Additional tests may be added to the test suite at any stage of the
-          Recommendation track, and the maintenance of a implementation report
-          is encouraged.
-        </p>
         <h3>
           Milestones
         </h3>
@@ -532,7 +557,7 @@
           provisions of any charter and the W3C Process, the W3C Process shall
           take precedence.
         </p>
-        <hr>
+        <hr/>
         <address>
           <span class="toadd">@TBD: Charter authors</span>
         </address>
