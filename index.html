@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>
       Second Screen Presentation Working Group
     </title>
     <link rel="stylesheet" href="http://www.w3.org/2005/10/w3cdoc.css" type=
-    "text/css" media="screen">
+    "text/css" media="screen"/>
     <link rel="stylesheet" type="text/css" href=
-    "http://www.w3.org/Guide/pubrules-style.css">
+    "http://www.w3.org/Guide/pubrules-style.css"/>
     <link rel="stylesheet" type="text/css" href=
-    "http://www.w3.org/2006/02/charter-style.css">
+    "http://www.w3.org/2006/02/charter-style.css"/>
   </head>
   <body>
     <div id="template">
@@ -48,9 +48,9 @@
       </ul>
       <p>
         <a href="http://www.w3.org/"><img alt="W3C" height="48" src=
-        "http://www.w3.org/Icons/w3c_home" width="72"></a> <a class=
+        "http://www.w3.org/Icons/w3c_home" width="72"/></a> <a class=
         "domainlogo" href="/UbiWeb/"><img src="http://www.w3.org/Icons/ubi212"
-        alt="Ubiquitous Web Domain"></a>
+        alt="Ubiquitous Web Domain"/></a>
       </p>
       <h1 id="title">
         <span class="toadd">DRAFT</span> Second Screen Presentation Working
@@ -102,7 +102,7 @@
         </tr>
         <tr>
           <th rowspan="1" colspan="1">
-            Initial Team Contacts<br>
+            Initial Team Contacts<br/>
             (FTE %: 100)
           </th>
           <td rowspan="1" colspan="1">
@@ -114,10 +114,10 @@
             Usual Meeting Schedule
           </th>
           <td rowspan="1" colspan="1">
-            Teleconferences: topic-specific calls may be held<br>
+            Teleconferences: topic-specific calls may be held<br/>
             Face-to-face: we will meet during the W3C's annual Technical
             Plenary week; an additional face-to-face meeting may be scheduled
-            by consent of the participants<br>
+            by consent of the participants<br/>
             IRC: active participants, particularly editors, regularly use the
             <a href="irc://irc.w3.org:6665/#webscreens">#webscreens</a> W3C IRC
             channel
@@ -131,23 +131,26 @@
         <p>
           Web content is available on an ever expanding array of devices
           including ebook readers, phones, tablets, laptops, auto displays, and
-          electronic billboards. These devices have a variety of device display
+          electronic billboards.  These devices have a variety of display
           screens. There are also a variety of mechanisms that allow these
-          devices to use display screens available in the local environment.
-          Common methods include attaching through video ports like VGA,
-          DisplayPort or HDMI, or wirelessly through Miracast, WiDi, or
-          AirPlay. Screens can also be attached over a network. A device like a
-          laptop could provide a screen for a smaller device like a phone. For
-          many of these techniques the operating system hides how the screen is
-          attached and provides ways for native applications to use the
+          devices to use secondary display screens available in the local
+          environment, attached by wired connections or remotely with wireless,
+          peer-to-peer media.
+        </p>
+        <p>
+          Common attachment methods include video ports like VGA, DisplayPort or
+          HDMI, or wirelessly through Miracast, WiDi, or AirPlay. Wireless
+          screens may be available on a local area network or over the Internet,
+          brokered by a cloud service.  A device like a laptop could provide a
+          screen for a smaller device like a phone.
+        </p>
+        <p>
+          For many of these techniques the operating system hides how the screen
+          is attached and provides ways for native applications to use the
           screens. Native applications on an operating system can easily use
           these additional screens without having to know how they are attached
           to the device. At this point, however, there is no way for a web page
           to take advantage of these available secondary displays.
-        </p>
-        <p>
-          The goal of this Working Group is to define simple APIs that allow
-          web content to use available secondary displays.
         </p>
       </div>
       <div class="scope">
@@ -155,36 +158,38 @@
           Scope
         </h2>
         <p>
-          The scope of this Working Group is to define APIs to allow web
-          applications to access the underlying OS capabilities to display web
-          content on secondary screens.
-        </p>
+          The scope of this Working Group is to define simple APIs that allow web
+          applications to show and control web content on one or more secondary
+          displays.
+         </p>
         <p>
           The specifications produced by this Working Group will include
           security and privacy considerations. Specifically, the user must
           always be in control of privacy-sensitive information that may be
-          conveyed through the APIs, such as the visibility or access to second
-          screens.
+          conveyed through the APIs, such as the visibility or access to
+          secondary displays.
         </p>
         <p>
           Members of the Working Group should review other working groups'
           deliverables that are identified as being relevant to the Working
           Group's mission.
         </p>
-        <p>
-          The Working Group's deliverables are split in two phases, and to
-          reflect that, the scope section is divided similarly for clarity.
-        </p>
         <h3>
-          Phase 1
+          API and associated specification
         </h3>
         <p>
-          An API to allow a web application to request display of an HTML page
-          on a second screen, with a means to communicate with and control the
-          second page from the initiating page. The API will hide the details
-          of the underlying connection technologies and use familiar, common
-          web technologies for messaging between the initiating page and the
-          page being displayed on the second device.
+          An API to allow a web application to request display of web content on
+          a connected display, with a means to communicate with and control the
+          web content from the initiating page and other authorized pages.
+          Pages may become authorized to control the web content by virtue of
+          sharing an origin with the originating page, explicit user permission,
+          or other facilities provided by the user agent.  The API will hide the
+          details of the underlying connection technologies and use familiar,
+          common web technologies for messaging between the authorized pages and
+          the web content shown on the secondary display.  The web content may
+          comprise HTML documents, web media types such as images, audio, video,
+          or application-specific media, depending on the capabilities of the
+          secondary display for rendering the media.
         </p>
         <p>
           The API will provide a means to identify whether requesting display
@@ -194,49 +199,60 @@
         <p>
           The API is agnostic with regard to the display connection used, and
           also works with display connections that support video only, for
-          example, a TV connected to a laptop with an HDMI connection. In such
-          a usage scenario, the second page displayed on the second screen must
-          be rendered and converted to video before it is sent to the second
+          example, a TV connected to a laptop with an HDMI connection. In such a
+          usage scenario, the web content displayed on a connected display must
+          be rendered and converted to video before it is sent to a second
           screen. The User Agent may use whatever means the operating system
-          provides to prepare and send the video to the second screen. Any
-          interaction between the initiating web page and the page displayed on
-          the second screen would happen within the bounds of the initiating
-          device since both the pages are rendered on that same device, and
-          only a video representation is sent to the second screen.
+          provides to prepare and send the video to a second screen. Any
+          interaction between the authorized web pages and the content displayed
+          on a secondary screen would happen within the bounds of the initiating
+          device since both the pages and the content are rendered on that same
+          device, and only a video representation is sent to the second screen.
         </p>
         <p>
           Alternatively, if the second screen device understands some other
-          means of transmitting a page to a display and a means of two-way
-          message passing, the second page can be rendered by the remote
-          device. How and by which device the second page is rendered is an
-          implementation detail. The User Agent provides access to any
-          secondary displays it has access to, regardless of which device
-          renders the second page.
+          means of transmitting content to a display and a means of two-way
+          message passing, the web content can be rendered by the remote device.
+          In this scenario, the content to be displayed (or a URL to the
+          content) is sent to the secondary display to be rendered there.
+          Because the content is rendered separately from the initiating user
+          agent, pages hosted by other user agents may be authorized to control
+          the remotely rendered content.
+        </p>
+        <p>
+          For a requested piece of web content, how and by which device the
+          content is rendered is an implementation detail. The user agent is
+          responsible for determining which secondary displays are compatible with
+          the content that is requested to be shown through the API.
         </p>
         <h3>
-          Phase 2
+          Protocol for utilizing secondary displays
         </h3>
+        <p>
+          A standardized set of network protocols for sharing content between
+          user agents and wireless secondary displays will facilitate
+          interoperability among browser vendors and display devices and
+          encourage adoption of the API.
+        </p>
         <p class="toadd">
           @TBD - the group should decide which of the <a href=
           "http://lists.w3.org/Archives/Public/public-webscreens/2014Mar/0025.html">
-          following aspects discussed in the Community Group</a>, if any, are
-          in scope for this Working Group:
+          following aspects discussed in the Community Group</a>, if any, are in
+          scope for this Working Group.  If they are not deemed in scope, they
+          may be suitable for a parallel effort in an appropriate standards
+          process (e.g., through the IETF).
         </p>
         <ol class="toadd">
-          <li>Connection technology protocol level discovery
+          <li>Discovery of wireless secondary displays by the primary user agent
           </li>
-          <li>Connection establishment and transport, including message
-          addressing, security and authentication
+          <li>Establishment of a messaging channel between the two parties,
+          including message addressing, security and authentication
           </li>
-          <li>Application / media control protocol
+          <li>Negotiation of a media streaming session between devices
           </li>
-          <li>Media streaming
+          <li>Network transport of media data
           </li>
         </ol>
-        <p>
-          The Phase 1 deliverable does not have a dependency on the Phase 2
-          deliverables.
-        </p>
         <h3>
           Success Criteria
         </h3>
@@ -251,7 +267,7 @@
         <p>
           The specifications defined by this Working Group abstract away the
           means of connecting and different connection technologies. For
-          example, the following is out of scope:
+          example, the following are out of scope:
         </p>
         <ul>
           <li>Lower level APIs that expose features of different connection
@@ -304,8 +320,8 @@
             Presentation API
           </dt>
           <dd>
-            An API to enable displaying an HTML page on a second screen and
-            communicating between the initiating page and the page that is to
+            An API to enable displaying web content on a second screen and
+            communicating between authorized pages and the content that is to
             be displayed on the second screen. The initial version of this
             document will be copied from the <a href=
             "http://webscreens.github.io/presentation-api/">Presentation API
@@ -541,7 +557,7 @@
           provisions of any charter and the W3C Process, the W3C Process shall
           take precedence.
         </p>
-        <hr>
+        <hr/>
         <address>
           <span class="toadd">@TBD: Charter authors</span>
         </address>
