@@ -398,10 +398,40 @@
         <h3>
           Dependencies
         </h3>
+
+        <p>
+          The initial draft of the Presentation API was prepared by the
+          <a href="http://www.w3.org/community/webscreens/">Second Screen
+          Presentation Community Group</a>. Upon approval of the Working Group,
+          the Community Group will publish a W3C Community Group Final Report of
+          its Presentation API specification and will cease its work on the
+          deliverable. The Community Group may recharter to work on other
+          related deliverables that are not yet ready for the Working Group,
+          or disband when the Working Group is formed.
+        </p>
+
         <p>
           The specifications produced by this Working Group adhere to the Web's
           security model defined in the HTML specification published by the
           HTML Working Group.
+        </p>
+        <p>
+          Common web technologies that this Working Group could refer to for
+          messaging purpose include HTML5 Web Messaging and the Web Socket API
+          defined by the Web Applications Working Group.
+        </p>
+        <p>
+          Some of the use cases that this Working Group aims to address, in
+          particular the discovery and control of a display service connected on
+          the local network, are also in scope of the Network Service Discovery
+          API worked upon by the Device APIs Working Group. This Working Group
+          will liaise with the Device APIs Working Group to avoid duplication
+          of efforts and of solutions in this space.
+        </p>
+        <p>
+          This Working Group is not aware of any dependencies other
+          Working Groups’ specifications have on this Working Group’s
+          specifications.
         </p>
         <h3>
           Liaisons
@@ -413,48 +443,91 @@
           appropriate:
         </p>
         <dl>
-          <dt>
+          <dt><a href="http://www.w3.org/2009/dap/" id="dap">
             Device APIs Working Group
-          </dt>
-          <dd class="toadd">
-            @TBD
+          </a></dt>
+          <dd>
+            The Device APIs Working Group defines the Network Service Discovery
+            API that addresses some of the use cases that are in scope of the
+            Second Screen Presentation Working Group.
           </dd>
-          <dt>
+          <dt><a href="http://www.w3.org/html/wg/" id="html">
             HTML Working Group
-          </dt>
-          <dd class="toadd">
-            @TBD
+          </a></dt>
+          <dd>
+            The HTML Working Group’s deliverables cover the security model
+            implemented in Web Browsers; this security model imposes limitations
+            on what an extended model for Web Applications can achieve.
           </dd>
-          <dt>
-            System Applications Working Group
+          <dt><a id="wai" href="http://www.w3.org/WAI/">
+            Web Accessibility Initiative</a>
+            <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working
+              Group</a>
           </dt>
-          <dd class="toadd">
-            @TBD
+          <dd>
+            To ensure the Presentation API supports accessibility requirements,
+            particularly with regard to interoperability with assistive
+            technologies, and inclusion in the deliverable of guidance for
+            implementing the group’s deliverables in ways that support
+            accessibility requirements.
           </dd>
-          <dt>
+          <dt><a id="webapps" href="http://www.w3.org/2008/webapps/">
             Web Applications Working Group
-          </dt>
-          <dd class="toadd">
-            @TBD
+          </a></dt>
+          <dd>
+            This group defines relevant or potentially relevant specifications
+            including
+            <cite><a href="http://www.w3.org/TR/WebIDL/">Web IDL</a></cite>,
+            <cite><a href="http://www.w3.org/TR/webmessaging/">HTML5 Web Messaging</a></cite>
+            and <cite><a href="http://www.w3.org/TR/websockets/">The Web Socket API</a></cite>.
           </dd>
-          <dt>
+          <dt><a href="http://www.w3.org/2011/webtv/">
             Web and TV Interest Group
-          </dt>
-          <dd class="toadd">
-            @TBD
+          </a></dt>
+          <dd>
+            This group provides use cases and requirements for second screen
+            scenarios and thus important input on the Presentation API developed
+            by the Second Screen Presentation Working Group.
           </dd>
         </dl>
+
         <h3>
           External Groups
         </h3>
+
         <p>
-          Upon approval of this Working Group, the Second Screen Presentation
-          Community Group will publish a W3C Community Group Final Report of
-          its Presentation API specification and will cease its work on the
-          deliverable. The Community Group may recharter to work on other
-          related deliverables that are not yet ready for the Working Group, or
-          disband when the Working Group is formed.
+          The Presentation API does not have strong dependencies on any given
+          set of protocols. The following is a tentative list of external
+          bodies the Working Group should collaborate with to ensure that the
+          Presentation API can be implemented on top of widely deployed
+          attachment methods for connected displays:
         </p>
+        <dl>
+          <dt><a href="http://www.dlna.org/home">DLNA</a></dt>
+          <dd>
+            The Digital Living Network Alliance references home network
+            protocols that secondary displays may support.
+          </dd>
+
+          <dt><a href="http://www.ietf.org" id="ietf">IETF</a></dt>
+          <dd>
+            The IETF develops home network protocols
+            that secondary displays may support.
+          </dd>
+
+          <dt><a href="http://www.upnp.org/">UPnP Forum</a></dt>
+          <dd>
+            The UPnP Forum develops home network protocols
+            that secondary displays may support.
+          </dd>
+
+          <dt><a href="http://www.wi-fi.org/">Wi-Fi Alliance</a></dt>
+          <dd>
+            The Wi-Fi Alliance develops home network protocols
+            that secondary displays may support.
+          </dd>
+        </dl>
+
         <div class="participation">
           <h2 id="participation">
             Participation
