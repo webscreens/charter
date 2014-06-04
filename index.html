@@ -234,9 +234,10 @@
         </p>
         <p>
           To advance to Proposed Recommendation, interoperability between the
-          independent implementations (that is, same content rendered and same
-          experience regardless of the user agent and secondary display
-          considered) should be demonstrated.
+          independent implementations should be demonstrated. Interoperable
+          user agents hosting the same Presentation API web application should
+          be able to render the same content with the same functionality on
+          multiple types of secondary displays.
         </p>
         <h3 id="out-of-scope">
           Out of Scope
@@ -278,13 +279,11 @@
         </p>
         <p>
           Content mirroring, whereby a web application requests display of
-          the content rendered by the primary user agent on a secondary display,
-          is out of scope.
-          In other words, the Presentation API will not allow web applications
-          to render their browsing context on another display.
+          the content shown in its own browsing context (i.e., page) on a
+          secondary display, is out of scope.
           If a web application requests display of itself (same URL) on a
-          connected display, a new browsing context will be created and
-          rendered on the connected display.
+          connected display, a new browsing context will be created with that
+          URL and rendered on the connected display.
         </p>
         <p>
           This Working Group will not define or mandate any video or audio
