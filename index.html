@@ -152,33 +152,19 @@
           attached to the device. At this point, however, there is no way for a
           web page to take advantage of these available secondary displays.
         </p>
+        <p>
+          The Second Screen Presentation Working Group aims at defining simple
+          APIs that allow web applications to show and control web content on
+          one or more secondary displays.
+        </p>
       </div>
       <div class="scope">
         <h2 id="scope">
           Scope
         </h2>
         <p>
-          The scope of this Working Group is to define simple APIs that allow
-          web applications to show and control web content on one or more
-          secondary displays.
-        </p>
-        <p>
-          The specifications produced by this Working Group will include
-          security and privacy considerations. Specifically, the user must
-          always be in control of privacy-sensitive information that may be
-          conveyed through the APIs, such as the visibility or access to
-          secondary displays.
-        </p>
-        <p>
-          Members of the Working Group should review other working groups'
-          deliverables that are identified as being relevant to the Working
-          Group's mission.
-        </p>
-        <h3>
-          API and associated specification
-        </h3>
-        <p>
-          An API to allow a web application to request display of web content
+          The scope of this Working Group is to define an API that allows a web
+          application to request display of web content
           on a connected display, with a means to communicate with and control
           the web content from the initiating page and other authorized pages.
           Pages may become authorized to control the web content by virtue of
@@ -226,35 +212,18 @@
           responsible for determining which secondary displays are compatible
           with the content that is requested to be shown through the API.
         </p>
-        <h3>
-          Protocol for utilizing secondary displays
-        </h3>
         <p>
-          A standardized set of network protocols for sharing content between
-          user agents and wireless secondary displays will facilitate
-          interoperability among browser vendors and display devices and
-          encourage adoption of the API.
+          The specifications produced by this Working Group will include
+          security and privacy considerations. Specifically, the user must
+          always be in control of privacy-sensitive information that may be
+          conveyed through the APIs, such as the visibility or access to
+          secondary displays.
         </p>
-        <p class="toadd">
-          @TBD - the group should decide which of the <a href=
-          "http://lists.w3.org/Archives/Public/public-webscreens/2014Mar/0025.html">
-          following aspects discussed in the Community Group</a>, if any, are
-          in scope for this Working Group. If they are not deemed in scope,
-          they may be suitable for a parallel effort in an appropriate
-          standards process (e.g., through the IETF).
+        <p>
+          Members of the Working Group should review other working groups'
+          deliverables that are identified as being relevant to the Working
+          Group's mission.
         </p>
-        <ol class="toadd">
-          <li>Discovery of wireless secondary displays by the primary user
-          agent
-          </li>
-          <li>Establishment of a messaging channel between the two parties,
-          including message addressing, security and authentication
-          </li>
-          <li>Negotiation of a media streaming session between devices
-          </li>
-          <li>Network transport of media data
-          </li>
-        </ol>
         <h3>
           Success Criteria
         </h3>
@@ -262,6 +231,14 @@
           To advance to Proposed Recommendation, each specification is expected
           to have two independent implementations of each feature defined in
           the specification.
+        </p>
+        <p>
+          To advance to Proposed Recommendation, interoperability between the
+          independent implementations should be demonstrated. Interoperable
+          user agents hosting the same Presentation API web application should
+          be able to render the same content with the same functionality on
+          supported secondary displays that are compatible with the content to
+          render.
         </p>
         <h3 id="out-of-scope">
           Out of Scope
@@ -283,21 +260,31 @@
           </li>
         </ul>
         <p>
-          Two common modes of second screen usage in general are:
+          This Working Group will not define or mandate network protocols
+          for sharing content between user agents and secondary displays.
+          For example, the following are out of scope:
         </p>
-        <ol style="list-style-type: lower-alpha">
-          <li>the second screen mirrors the first screen (e.g. display on the
-          laptop is copied on a TV); and
-          </li>
-          <li>the second screen extends the first screen and acts as if the
-          second screen is off one edge of the primary screen.
-          </li>
-        </ol>
+        <ul>
+          <li>Discovery of wireless secondary displays by the primary user
+          agent</li>
+          <li>Establishment of a messaging channel between the two parties,
+          including message addressing, security and authentication</li>
+          <li>Negotiation of a media streaming session between devices</li>
+          <li>Network transport of media data</li>
+        </ul>
         <p>
-          In case (b), the content is not the same and web content can run
-          entirely on the second screen (e.g. a remote control on the first
-          screen and a video being played on the second). This Working Group
-          focuses on the case (b).
+          To facilitate interoperability among user agents and display devices
+          and encourage adoption of the API, the group may informatively
+          reference existing suites of protocols, either directly in the
+          Presentation API deliverable or in a non-normative companion Note.
+        </p>
+        <p>
+          Content mirroring, whereby a web application requests display of
+          the content shown in its own browsing context (i.e., page) on a
+          secondary display, is out of scope.
+          If a web application requests display of itself (same URL) on a
+          connected display, a new browsing context will be created with that
+          URL and rendered on the connected display.
         </p>
         <p>
           This Working Group will not define or mandate any video or audio
@@ -312,11 +299,8 @@
           Recommendation-Track Deliverables
         </h3>
         <p>
-          The working group will deliver at least the following specifications:
+          The working group will deliver at least the following specification:
         </p>
-        <h4>
-          Phase 1
-        </h4>
         <dl>
           <dt>
             Presentation API
@@ -330,18 +314,6 @@
             W3C Community Group Draft Report</a> which was produced by the W3C
             Second Screen Presentation Community Group. Further modifications
             (if any) will be decided upon by this Working Group.
-          </dd>
-        </dl>
-        <h4>
-          Phase 2
-        </h4>
-        <dl>
-          <dt>
-            <span class="toadd">Presentation API: @TBD Extension</span>
-          </dt>
-          <dd>
-            <span class="toadd">[@TBD - each deliverable to be included should
-            have a concrete input document provided by Members.]</span>
           </dd>
         </dl>
         <h3 id="other-deliverables">
@@ -370,6 +342,16 @@
             The Working Group is strongly encouraging the participants to
             create and maintain a use cases and requirements document for each
             specification.
+          </dd>
+          <dt>
+            Implementation guidelines
+          </dt>
+          <dd>
+            To facilitate interoperability among user agents and display devices
+            and encourage adoption of the API, the group may provide informative
+            guidelines for implementors, either directly as informative notes
+            within the Presentation API or in a separate non-normative group
+            Note.
           </dd>
         </dl>
         <p>
