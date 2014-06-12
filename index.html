@@ -164,18 +164,20 @@
         </h2>
         <p>
           The scope of this Working Group is to define an API that allows a web
-          application to request display of web content
-          on a connected display, with a means to communicate with and control
-          the web content from the initiating page and other authorized pages.
-          Pages may become authorized to control the web content by virtue of
-          sharing an origin with the originating page, explicit user
-          permission, or other facilities provided by the user agent. The API
-          will hide the details of the underlying connection technologies and
-          use familiar, common web technologies for messaging between the
-          authorized pages and the web content shown on the secondary display.
-          The web content may comprise HTML documents, web media types such as
-          images, audio, video, or application-specific media, depending on the
-          capabilities of the secondary display for rendering the media.
+          application to request display of web content on a connected display,
+          with a means to communicate with and control the web content from the
+          initiating page and other authorized pages.  Pages may become
+          authorized to control the web content by virtue of sharing an origin
+          with the originating page, explicit user permission, or other
+          facilities provided by the user agent. The API will hide the details
+          of the underlying connection technologies and use familiar, common web
+          technologies for messaging between the authorized pages and the web
+          content shown on the secondary display.  The web content may comprise
+          HTML documents, web media types such as images, audio, video, or
+          application-specific media, depending on the capabilities of the
+          secondary display for rendering the media.  Application-specific media
+          includes that whose type is known to the controlling page and the
+          connected display, but not necessarily a generic HTML User Agent.
         </p>
         <p>
           The API will provide a means to identify whether requesting display
@@ -200,11 +202,11 @@
           Alternatively, if the second screen device understands some other
           means of transmitting content to a display and a means of two-way
           message passing, the web content can be rendered by the remote
-          device. In this scenario, the content to be displayed (or a URL to
-          the content) is sent to the secondary display to be rendered there.
-          Because the content is rendered separately from the initiating user
-          agent, pages hosted by other user agents may be authorized to control
-          the remotely rendered content.
+          device. In this scenario, a URL to the content to be displayed is
+          sent to the secondary display to be rendered there.  Because the
+          content is rendered separately from the initiating user agent, pages
+          hosted by other user agents may be authorized to control the
+          remotely rendered content.
         </p>
         <p>
           For a requested piece of web content, how and by which device the
