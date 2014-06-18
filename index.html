@@ -116,8 +116,8 @@
           <td rowspan="1" colspan="1">
             Teleconferences: topic-specific calls may be held<br />
             Face-to-face: we will meet during the W3C's annual Technical
-            Plenary week; an additional face-to-face meeting may be scheduled
-            by consent of the participants<br />
+            Plenary week; other additional F2F meetings may be scheduled (up to
+            2 per year) <br />
             IRC: active participants, particularly editors, regularly use the
             <a href="irc://irc.w3.org:6665/#webscreens">#webscreens</a> W3C IRC
             channel
@@ -308,13 +308,15 @@
             Presentation API
           </dt>
           <dd>
-            An API to enable displaying web content on a second screen and
-            communicating between authorized pages and the content that is to
-            be displayed on the second screen. The initial version of this
+            An API that allows a web application to request display of web
+            content on a connected display, with a means to communicate with and
+            control the web content from the initiating page and other
+            authorized pages. The initial version of this
             document will be copied from the <a href=
             "http://webscreens.github.io/presentation-api/">Presentation API
-            W3C Community Group Draft Report</a> which was produced by the W3C
-            Second Screen Presentation Community Group. Further modifications
+            W3C Community Group Final Report</a> <span class="toadd">(@@ update
+            link when report is published)</span> produced by the W3C Second
+            Screen Presentation Community Group. Further modifications
             (if any) will be decided upon by this Working Group.
           </dd>
         </dl>
@@ -334,10 +336,10 @@
             necessary to ensure the specification's robustness, consistency,
             and implementability, and to promote interoperability between User
             Agents. Therefore, each specification must have a companion test
-            suite, which should be completed by the end of the Last Call phase,
-            and must be completed, with an implementation report, before
-            transition from Candidate Recommendation to Proposed
-            Recommendation. Additional tests may be added to the test suite at
+            suite, which should be completed before transition to Candidate
+            Recommendation, and which must be completed with an implementation
+            report before transition to Proposed Recommendation.
+            Additional tests may be added to the test suite at
             any stage of the Recommendation track, and the maintenance of a
             implementation report is encouraged.
           </dd>
@@ -444,11 +446,13 @@
           The initial draft of the Presentation API was prepared by the
           <a href="http://www.w3.org/community/webscreens/">Second Screen
           Presentation Community Group</a>. Upon approval of the Working Group,
-          the Community Group will publish a W3C Community Group Final Report of
-          its Presentation API specification and will cease its work on the
-          deliverable. The Community Group may recharter to work on other
-          related deliverables that are not yet ready for the Working Group,
-          or disband when the Working Group is formed.
+          the Community Group will cease its work on the Presentation API
+          specification. It is expected that the Community Group will recharter
+          to work on other related deliverables where it is not clear enough how
+          to proceed for it to be a work item for a Working Group. The
+          Community Group is only one possible source for work under future WG
+          Charters, but can serve to do initial exploration for some future
+          work items.
         </p>
 
         <p>
@@ -462,12 +466,14 @@
           defined by the Web Applications Working Group.
         </p>
         <p>
-          Some of the use cases that this Working Group aims to address, in
-          particular the discovery and control of a display service connected on
-          the local network, are also in scope of the Network Service Discovery
-          API worked upon by the Device APIs Working Group. This Working Group
-          will liaise with the Device APIs Working Group to avoid duplication
-          of efforts and of solutions in this space.
+          Even though the scopes of the APIs are different, some of the use
+          cases that the Presentation API aims to address, in particular
+          projection of web content on second screens connected to the local
+          area network, are also in scope of the Network Service Discovery API
+          worked upon by the Device APIs Working Group. This Working Group will
+          liaise with the Device APIs Working Group, in particular to ensure
+          consistency of supported service discovery mechanisms when a user
+          agent implements both APIs.
         </p>
         <p>
           This Working Group is not aware of any dependencies other
@@ -507,6 +513,13 @@
             The Second Screen Presentation Working Group intends to secure
             reviews on its deliverables from the Privacy Interest Group to
             ensure they offer the right level of protection to users.
+          </dd>
+          <dt><a href="http://www.w3.org/community/webscreens/" id="sspcg">
+            Second Screen Presentation Community Group
+          </a></dt>
+          <dd>
+            This group developed the initial version of the Presentation API
+            and will likely continue to explore new features.
           </dd>
           <dt><a id="wai" href="http://www.w3.org/WAI/">
             Web Accessibility Initiative</a>
@@ -689,6 +702,17 @@
             <a href="http://www.w3.org/Consortium/Legal/2002/copyright-documents-20021231">
               W3C Document License
             </a> (Dual License).
+          </p>
+          <p>
+            As described above, the
+            <a href="http://www.w3.org/community/webscreens/">Second Screen
+            Presentation Community Group</a> produced the initial draft that led
+            to this Working Group and may similarly produce drafts on other
+            related topics the Working Group could recharter to take up. If it
+            proves to be the case that some feature or an entire spec has
+            problems that indicate it is not ready for standardization, it
+            should be possible to pass that work back to the Community Group.
+            The dual license would allow for that to happen.
           </p>
           <p>The title of the specifications created by the Working Group will
             start with "W3C". Derivative works based on these specifications
