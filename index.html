@@ -40,9 +40,6 @@
           <a href="#patentpolicy">Patent Policy</a>
         </li>
         <li>
-          <a href="#documentlicense">Document License</a>
-        </li>
-        <li>
           <a href="#about">About this Charter</a>
         </li>
       </ul>
@@ -56,11 +53,6 @@
         <span class="toadd">DRAFT</span> Second Screen Presentation Working
         Group Charter
       </h1>
-      <p class="toadd">
-        This Charter builds upon the <a href=
-        "https://github.com/webscreens/presentation-api/wiki/Second-Screen-Community-Group-Charter">
-        Second Screen Community Group Charter</a>.
-      </p>
       <p class="mission">
         The <strong>mission</strong> of the Second Screen Presentation Working
         Group is to provide specifications that enable web pages to use
@@ -97,16 +89,16 @@
             Initial Chairs
           </th>
           <td rowspan="1" colspan="1">
-            <span class="toadd">@TBD</span>
+            Anssi Kostiainen
           </td>
         </tr>
         <tr>
           <th rowspan="1" colspan="1">
             Initial Team Contacts<br />
-            (FTE %: 100)
+            (FTE %: 20)
           </th>
           <td rowspan="1" colspan="1">
-            <span class="toadd">@TBD</span>
+            François Daoust
           </td>
         </tr>
         <tr>
@@ -181,7 +173,7 @@
         </p>
         <p>
           The API will provide a means to identify whether requesting display
-          on a second screen is likely to be successful, i.e. whether at least one
+          on second screens is likely to be successful, i.e. whether at least one
           secondary screen is available for display.
         </p>
         <p>
@@ -213,6 +205,12 @@
           content is rendered is an implementation detail. The user agent is
           responsible for determining which secondary displays are compatible
           with the content that is requested to be shown through the API.
+        </p>
+        <p>
+          Sending content to a connected display creates a presentation session.
+          Applications can create multiple presentation sessions to control
+          multiple displays, although synchronization between them is not
+          currently supported by the API.
         </p>
         <p>
           The specifications produced by this Working Group will include
@@ -313,9 +311,9 @@
             control the web content from the initiating page and other
             authorized pages. The initial version of this
             document will be copied from the <a href=
-            "http://webscreens.github.io/presentation-api/">Presentation API
-            W3C Community Group Final Report</a> <span class="toadd">(@@ update
-            link when report is published)</span> produced by the W3C Second
+            "http://www.w3.org/2014/secondscreen/presentation-api/20140721/">
+            Presentation API W3C Community Group Final Report</a>
+            produced by the W3C Second
             Screen Presentation Community Group. Further modifications
             (if any) will be decided upon by this Working Group.
           </dd>
@@ -462,7 +460,7 @@
         </p>
         <p>
           Common web technologies that this Working Group could refer to for
-          messaging include HTML5 Web Messaging and the Web Socket API
+          messaging include Web Messaging and the Web Socket API
           defined by the Web Applications Working Group.
         </p>
         <p>
@@ -688,45 +686,6 @@
             For more information about disclosure obligations for this group,
             please see the <a href="http://www.w3.org/2004/01/pp-impl/">W3C
             Patent Policy Implementation</a>.
-          </p>
-        </div>
-        <div class="documentlicense">
-          <h2 id="documentlicense">
-            Document License
-          </h2>
-          <p>
-            This Working Group will publish its specifications under the
-            <a href="http://creativecommons.org/licenses/by/3.0/">
-              Creative Commons Attribution 3.0 Unported License (CC-BY)
-            </a> as well as the
-            <a href="http://www.w3.org/Consortium/Legal/2002/copyright-documents-20021231">
-              W3C Document License
-            </a> (Dual License).
-          </p>
-          <p>
-            As described above, the
-            <a href="http://www.w3.org/community/webscreens/">Second Screen
-            Presentation Community Group</a> produced the initial draft that led
-            to this Working Group and may similarly produce drafts on other
-            related topics the Working Group could recharter to take up. If it
-            proves to be the case that some feature or an entire spec has
-            problems that indicate it is not ready for standardization, it
-            should be possible to pass that work back to the Community Group.
-            The dual license would allow for that to happen.
-          </p>
-          <p>The title of the specifications created by the Working Group will
-            start with "W3C". Derivative works based on these specifications
-            <strong>must</strong>:
-          </p>
-          <ol>
-            <li>not use "W3C" in their titles;</li>
-            <li>attribute the original specification to W3C (MIT, ERCIM, Keio, Beihang); and</li>
-            <li>include a link to the original W3C document.</li>
-          </ol>
-          <p>
-            For questions about the relationship between derivative works of
-            W3C specifications and the W3C Patent Policy, see our related
-            <a href="http://www.w3.org/2013/09/html-faq#patpol">FAQ</a>.
           </p>
         </div>
         <h2 id="about">
